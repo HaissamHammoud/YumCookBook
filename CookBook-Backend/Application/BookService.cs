@@ -17,12 +17,17 @@ namespace CookBook.Application
 
         public async Task<Book> MadeRandomBook()
         {
-            var book = new Book()
-            {
-                Name = "randomname",
-                IsFree = true,
-                internalName = "ineternal Random Name"
-            };
+            var number = Random.Equals(0,100);
+            number.ToString();
+            var name = "Random Name" + number.ToString();
+            var book = Book.CreateBook(name, true, name);
+            await _bookRepository.Add(book);
+            return book;
+        }
+
+        public async Task<Book> CreateBook(string name, bool isFree, string internalName)
+        {
+            var book = Book.CreateBook(name, isFree, internalName);
             await _bookRepository.Add(book);
             return book;
         }

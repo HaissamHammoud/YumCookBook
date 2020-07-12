@@ -86,14 +86,13 @@ namespace CookBook.Controllers
         [HttpPost]
         public async Task<ActionResult<Book>> PostBook(Book book)
         {
-            _context.Books.Add(book);
-            await _context.SaveChangesAsync();
+            var book2 = await _bookService.CreateBook(book.Name, book.IsFree, book.InternalName);
 
-            return CreatedAtAction(nameof(GetBook), new { id = book.Id }, book);
+            return CreatedAtAction(nameof(GetBook), new { id = book2.Id }, book2);
         }
 
         [HttpPost("{random}")]
-        public async Task<ActionResult<Book>> PostRandomBookAsync(Book book)
+        public async Task<ActionResult<Book>> PostRandomBookAsync()
         {
             var book2 = await _bookService.MadeRandomBook();
 
