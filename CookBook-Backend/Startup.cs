@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using CookBook.Models;
 using CookBook.Repositories;
 using CookBook.Interface;
+using CookBook_Backend.Application.Interface;
+using CookBook.Application;
 
 namespace CookBook
 {
@@ -23,8 +25,8 @@ namespace CookBook
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CookBookContext>(opt => opt.UseInMemoryDatabase("BookList"));
-            services.AddScoped<CookBookContext>();
             services.AddScoped(typeof(IAsyncRepository<>), typeof(AsyncRepository<>));
+            services.AddScoped<IBookService, BookService>();
             services.AddControllers();
         }
 

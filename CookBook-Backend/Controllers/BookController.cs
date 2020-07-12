@@ -9,6 +9,7 @@ using CookBook.Models;
 using CookBook.Application;
 using CookBook.Interface;
 using CookBook.Repositories;
+using CookBook_Backend.Application.Interface;
 
 namespace CookBook.Controllers
 {
@@ -17,13 +18,11 @@ namespace CookBook.Controllers
     public class BookController : ControllerBase
     {
         private readonly CookBookContext _context;
-        private readonly BookService _bookService;
-        private readonly IAsyncRepository<Book> _Generic;
-        public BookController(CookBookContext context,BookService bookService,IAsyncRepository<Book> Generic)
+        private readonly IBookService _bookService;
+        public BookController(CookBookContext context,IBookService bookService)
         {
             _context = context;
             _bookService = bookService;
-            _Generic = Generic;
         }
 
         // GET: api/Book
@@ -94,11 +93,11 @@ namespace CookBook.Controllers
         }
 
         [HttpPost("{random}")]
-        public async Task<ActionResult<Book>> PostRandomBook()
+        public async Task<ActionResult<Book>> PostRandomBookAsync(Book book)
         {
-            var book2 = _bookService.MadeRandomBook();
+            var book2 = await _bookService.MadeRandomBook();
 
-            return book2;
+            return CreatedAtAction(nameof(GetBook), new { id = book2.Id }, book2);
         }
 
         // DELETE: api/Book/5

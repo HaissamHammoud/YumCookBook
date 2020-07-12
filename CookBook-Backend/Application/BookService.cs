@@ -1,21 +1,21 @@
 using System;
+using System.Threading.Tasks;
 using CookBook.Interface;
 using CookBook.Models;
 using CookBook.Repositories;
+using CookBook_Backend.Application.Interface;
 
 namespace CookBook.Application
 {
-    public class BookService
+    public class BookService : IBookService
     {   
         private readonly IAsyncRepository<Book> _bookRepository;
-        private readonly CookBookContext _cookBookContext;
         public BookService(IAsyncRepository<Book> bookRepository,CookBookContext cookBookContext)
         {
             _bookRepository = bookRepository;
-            _cookBookContext = cookBookContext;
         }
 
-        public Book MadeRandomBook()
+        public async Task<Book> MadeRandomBook()
         {
             var book = new Book()
             {
@@ -23,7 +23,7 @@ namespace CookBook.Application
                 IsFree = true,
                 internalName = "ineternal Random Name"
             };
-            _bookRepository.Add(book);
+            await _bookRepository.Add(book);
             return book;
         }
     }
