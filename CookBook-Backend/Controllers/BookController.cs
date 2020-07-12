@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CookBook.Models;
-using CookBook.Models.Common;
 using CookBook.Application;
 using CookBook.Interface;
+using CookBook.Repositories;
 
 namespace CookBook.Controllers
 {
@@ -94,7 +94,7 @@ namespace CookBook.Controllers
         }
 
         [HttpPost("{random}")]
-        public async Task<ActionResult<Book>> PostRandomBook(Book book)
+        public async Task<ActionResult<Book>> PostRandomBook()
         {
             var book2 = _bookService.MadeRandomBook();
 

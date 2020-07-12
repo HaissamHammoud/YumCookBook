@@ -8238,11 +8238,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\haiss\\Desktop\\site\\CookBooks\\CookBook\\CookBook.csproj",
+      "projectUniqueName": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks\\CookBook-Backend\\CookBook.csproj",
       "projectName": "CookBook",
-      "projectPath": "C:\\Users\\haiss\\Desktop\\site\\CookBooks\\CookBook\\CookBook.csproj",
+      "projectPath": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks\\CookBook-Backend\\CookBook.csproj",
       "packagesPath": "C:\\Users\\haiss\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\haiss\\Desktop\\site\\CookBooks\\CookBook\\obj\\",
+      "outputPath": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks\\CookBook-Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\haiss\\AppData\\Roaming\\NuGet\\NuGet.Config",

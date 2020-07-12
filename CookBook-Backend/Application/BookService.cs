@@ -1,7 +1,7 @@
 using System;
 using CookBook.Interface;
 using CookBook.Models;
-using CookBook.Models.Common;
+using CookBook.Repositories;
 
 namespace CookBook.Application
 {

@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using CookBook.Interface;
 using CookBook.Models;
-using CookBook.Models.Common;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace CookBook.Repositories
@@ -15,8 +15,8 @@ namespace CookBook.Repositories
     {
         #region Fields
 
-        protected CookBookContext Context;
-        private DbSet<T> entities;
+        private readonly CookBookContext Context;
+        private readonly DbSet<T> entities;
 
         #endregion
 

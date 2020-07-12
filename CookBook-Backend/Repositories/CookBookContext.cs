@@ -1,6 +1,7 @@
+using CookBook.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CookBook.Models.Common
+namespace CookBook.Repositories
 {
     public class CookBookContext : DbContext
     {
