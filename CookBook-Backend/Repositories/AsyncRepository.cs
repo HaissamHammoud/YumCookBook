@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using CookBook.Interface;
 using CookBook.Models;
-using CookBook.Models.Common;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace CookBook.Repositories
@@ -15,21 +15,24 @@ namespace CookBook.Repositories
     {
         #region Fields
 
-        protected CookBookContext Context;
-        private DbSet<T> entities;
+        private CookBookContext Context ;
+        private DbSet<T> Entities;
 
         #endregion
 
         public AsyncRepository(CookBookContext context)
         {
             Context = context;
-            entities = Context.Set<T>();
+            Entities = Context.Set<T>();
         }
 
         #region Public Methods
 
-        public Task<T> GetById(Guid id) => entities.FirstOrDefaultAsync(x => x.Id == id);
-
+        public async Task<T> GetById(Guid id)
+        {
+            T a = await Entities.FindAsync(id);
+            return a;
+        }
         public Task<T> FirstOrDefault(Expression<Func<T, bool>> predicate)
             => Context.Set<T>().FirstOrDefaultAsync(predicate);
 
@@ -67,6 +70,7 @@ namespace CookBook.Repositories
 
         public Task<int> CountWhere(Expression<Func<T, bool>> predicate)
             => Context.Set<T>().CountAsync(predicate);
+
 
         #endregion
     }
