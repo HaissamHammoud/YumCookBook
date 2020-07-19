@@ -12,7 +12,7 @@ namespace Cook.Domain.Models.Users
         public List<Book> BuyedBooks {get; set;}
         public List<Page> Pages {get; set;}
 
-        public Customer(string nickName, DateTime birthDate, string? picture)
+        public Customer(string nickName, DateTime birthDate, string? picture = null)
         {
             if(String.IsNullOrEmpty(nickName))
             {
@@ -25,6 +25,10 @@ namespace Cook.Domain.Models.Users
             if(String.IsNullOrEmpty(picture))
             {
                 Picture = "Url Foto Padrão";
+            }
+            else
+            {
+                Picture = picture;
             }
             OwnedBooks = new List<Book>();
             BuyedBooks = new List<Book>();
