@@ -1,4 +1,6 @@
 using System;
+using Cook.Domain.Models.Common;
+using CookBook.Models;
 
 namespace Cook.Domain.Models.Users
 {
@@ -13,7 +15,23 @@ namespace Cook.Domain.Models.Users
 
         public User (string document, string email, string passoword, string firstName, string lastName)
         {
-            if(String.IsNullOrEmpty(document || email || passoword || firstName || LastName))
+            if(String.IsNullOrEmpty(document))
+            {
+                throw new Exception("Não foram preenchidas todas as informações");
+            }
+            if(String.IsNullOrEmpty(email))
+            {
+                throw new Exception("Não foram preenchidas todas as informações");
+            }
+            if(String.IsNullOrEmpty(passoword))
+            {
+                throw new Exception("Não foram preenchidas todas as informações");
+            }
+            if(String.IsNullOrEmpty(firstName ))
+            {
+                throw new Exception("Não foram preenchidas todas as informações");
+            }
+            if(String.IsNullOrEmpty(lastName))
             {
                 throw new Exception("Não foram preenchidas todas as informações");
             }

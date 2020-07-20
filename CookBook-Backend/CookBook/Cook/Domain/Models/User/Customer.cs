@@ -1,4 +1,8 @@
 using System;
+using System.Collections.Generic;
+using Cook.Domain.Models.User.Book;
+using CookBook.Models;
+
 namespace Cook.Domain.Models.Users
 {
     public class Customer : User
@@ -12,15 +16,14 @@ namespace Cook.Domain.Models.Users
         public List<Book> BuyedBooks {get; set;}
         public List<Page> Pages {get; set;}
 
-        public Customer(string nickName, DateTime birthDate, string? picture = null)
+        public Customer(string nickName, DateTime birthDate,
+        string document, string email, string passoword, string firstName,
+         string lastName,string picture = null) 
+        : base(document, email, passoword,firstName,lastName)
         {
             if(String.IsNullOrEmpty(nickName))
             {
                 throw new Exception("É Preciso informar o NickName");
-            }
-            if(birthDate = null)
-            {
-                throw new Exception("É Preciso informar a data de nascimento");
             }
             if(String.IsNullOrEmpty(picture))
             {
@@ -33,7 +36,8 @@ namespace Cook.Domain.Models.Users
             OwnedBooks = new List<Book>();
             BuyedBooks = new List<Book>();
             Pages = new List<Page>();
-            Publication = new List<Publication>();
+            Publications = new List<Publication>();
+            BirthDate = birthDate;
         }   
     }
 }

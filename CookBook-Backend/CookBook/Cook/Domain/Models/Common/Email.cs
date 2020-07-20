@@ -15,7 +15,7 @@ namespace Cook.Domain.Models.Common
             {
                 throw new Exception("Endereço de Email invalido");
             }
-            Email = emailAddress;
+            Address = emailAddress;
         }
     }
 }
