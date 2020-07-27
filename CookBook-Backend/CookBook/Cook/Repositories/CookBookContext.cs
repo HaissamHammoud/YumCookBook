@@ -1,3 +1,4 @@
+using Cook.Domain.Models.Users;
 using CookBook.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,7 @@ namespace CookBook.Repositories
         }
 
         public DbSet<Book> Books {get; set;}
+        public DbSet<User> Users {get; set;}
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
