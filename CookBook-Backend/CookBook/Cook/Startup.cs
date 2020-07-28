@@ -25,7 +25,7 @@ namespace CookBook
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CookBookContext>(opt => opt.UseInMemoryDatabase("BookList"));
+            services.AddDbContext<CookBookContext>(opt => opt.UseSqlServer("BookList"));
             services.AddScoped(typeof(IAsyncRepository<>), typeof(AsyncRepository<>));
             services.AddScoped<IBookService, BookService>();
             services.AddMediatR(typeof(Startup));
