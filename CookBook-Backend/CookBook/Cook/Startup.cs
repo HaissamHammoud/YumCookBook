@@ -9,6 +9,7 @@ using CookBook.Repositories;
 using CookBook.Interface;
 using CookBook_Backend.Application.Interface;
 using CookBook.Application;
+using MediatR;
 
 namespace CookBook
 {
@@ -27,6 +28,7 @@ namespace CookBook
             services.AddDbContext<CookBookContext>(opt => opt.UseInMemoryDatabase("BookList"));
             services.AddScoped(typeof(IAsyncRepository<>), typeof(AsyncRepository<>));
             services.AddScoped<IBookService, BookService>();
+            services.AddMediatR(typeof(Startup));
             services.AddControllers();
         }
 
