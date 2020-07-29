@@ -10,6 +10,7 @@ using CookBook.Interface;
 using CookBook_Backend.Application.Interface;
 using CookBook.Application;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CookBook
 {
@@ -25,10 +26,11 @@ namespace CookBook
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CookBookContext>(opt => opt.UseSqlServer("BookList"));
+            services.AddDbContext<CookBookContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped(typeof(IAsyncRepository<>), typeof(AsyncRepository<>));
             services.AddScoped<IBookService, BookService>();
             services.AddMediatR(typeof(Startup));
+            services.AddMvc();
             services.AddControllers();
         }
 
