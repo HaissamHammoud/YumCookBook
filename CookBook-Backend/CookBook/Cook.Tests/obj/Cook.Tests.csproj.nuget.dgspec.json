@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook.Tests\\Cook.Tests.csproj": {}
+    "c:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook.Tests\\Cook.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook.Tests\\Cook.Tests.csproj": {
+    "c:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook.Tests\\Cook.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook.Tests\\Cook.Tests.csproj",
+        "projectUniqueName": "c:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook.Tests\\Cook.Tests.csproj",
         "projectName": "Cook.Tests",
-        "projectPath": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook.Tests\\Cook.Tests.csproj",
+        "projectPath": "c:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook.Tests\\Cook.Tests.csproj",
         "packagesPath": "C:\\Users\\haiss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook.Tests\\obj\\",
+        "outputPath": "c:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\haiss\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj": {
-                "projectPath": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj"
+              "c:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj": {
+                "projectPath": "c:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj"
               }
             }
           }
@@ -78,14 +78,14 @@
         }
       }
     },
-    "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj": {
+    "c:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj",
+        "projectUniqueName": "c:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj",
         "projectName": "CookBook",
-        "projectPath": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj",
+        "projectPath": "c:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj",
         "packagesPath": "C:\\Users\\haiss\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\obj\\",
+        "outputPath": "c:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\haiss\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -112,6 +112,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -129,6 +137,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[4.1.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.4, )"
             }
           },
           "imports": [

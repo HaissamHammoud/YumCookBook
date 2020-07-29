@@ -19,6 +19,8 @@ namespace CookBook.Repositories
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<User>().ToTable("Users");
+            builder.Entity<Book>().ToTable("Books");
             base.OnModelCreating(builder);
         }
     }
