@@ -8355,11 +8355,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj",
+      "projectUniqueName": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks\\YumCookBook\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj",
       "projectName": "CookBook",
-      "projectPath": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj",
+      "projectPath": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks\\YumCookBook\\CookBook-Backend\\CookBook\\Cook\\CookBook.csproj",
       "packagesPath": "C:\\Users\\haiss\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks2\\CookBook-Backend\\CookBook\\Cook\\obj\\",
+      "outputPath": "C:\\Users\\haiss\\Desktop\\DEV\\CookBooks\\YumCookBook\\CookBook-Backend\\CookBook\\Cook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\haiss\\AppData\\Roaming\\NuGet\\NuGet.Config",

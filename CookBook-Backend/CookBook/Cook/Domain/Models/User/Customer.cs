@@ -5,21 +5,20 @@ using CookBook.Models;
 
 namespace Cook.Domain.Models.Users
 {
-    public class Customer : User
+    public class Customer : BaseEntity 
     {
+        public User User {get; set;}
+        public Guid UserId {get; set;}
         public string NickName {get; set;}
         public DateTime BirthDate {get; set;}
         public List<Book> OwnedBooks {get; set;}
         public List<Receipt> Receipts {get; set;}
         public string Picture {get; set;}
         public List<Publication> Publications {get; set;}
-        public List<Book> BuyedBooks {get; set;}
+        public List<BuyedBook> BuyedBooks {get; set;}
         public List<Page> Pages {get; set;}
 
-        public Customer(string nickName, DateTime birthDate,
-        string document, string email, string passoword, string firstName,
-         string lastName,string picture = null) 
-        : base(document, email, passoword,firstName,lastName)
+        public Customer(string nickName, DateTime birthDate,string picture = null) 
         {
             if(String.IsNullOrEmpty(nickName))
             {
@@ -34,7 +33,7 @@ namespace Cook.Domain.Models.Users
                 Picture = picture;
             }
             OwnedBooks = new List<Book>();
-            BuyedBooks = new List<Book>();
+            BuyedBooks = new List<BuyedBook>();
             Pages = new List<Page>();
             Publications = new List<Publication>();
             BirthDate = birthDate;

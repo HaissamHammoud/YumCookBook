@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using Cook.Domain.Models;
+using Cook.Domain.Models.Users;
 using CookBook.Models;
 
 namespace CookBook.Models
@@ -6,6 +9,8 @@ namespace CookBook.Models
     public class Book : BaseEntity
     {
         public string Name {get; set; }
+        public Customer Owner {get; set; }
+        public List<BuyedBook> BuyedBy {get; set; }
         public bool IsFree {get; set; }
         public string InternalName {get; set; }
 

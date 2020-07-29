@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Cook.Domain.Models.Common;
 using Cook.Domain.Models.Users;
 using CookBook.Models;
@@ -7,12 +8,14 @@ namespace Cook.Domain.Models.Users
 {
     public class User : BaseEntity
     {
+        public Customer Customer {get; set; }
         public string Document {get; set;}
         public string Email {get; set;}
         public string Loggin {get; set;}
         public string Password {get; set;}
         public string FirstName {get; set;}
         public string LastName {get; set;} 
+        public List<Book> Books {get; set;}
 
         public User (string document, string email, string password, string firstName, string lastName)
         {
